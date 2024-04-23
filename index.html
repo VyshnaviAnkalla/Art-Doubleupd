@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CanvasEcho Art Gallery</title>
+    <style>
+        body { font-family: Arial, sans-serif; background: #f0f0f0; margin: 0; padding: 0; }
+        .top-nav { background: #000; color: #fff; overflow: hidden; }
+        .top-nav a { float: left; color: #ffffff; text-align: center; padding: 14px 16px; text-decoration: none; font-size: 17px; }
+        .gallery-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); gap: 1rem; padding: 1rem; }
+        .artwork { position: relative; }
+        .artwork img { width: 100%; height: auto; }
+        .artwork-info, .artwork-action { position: absolute; width: 100%; padding: 10px; }
+        .artwork-info { bottom: 30px; background-color: rgba(0,0,0,0.7); color: #fff; opacity: 0; transition: opacity 0.5s; }
+        .artwork-action { bottom: 0; text-align: center; }
+        .artwork:hover .artwork-info { opacity: 1; }
+        button { padding: 10px; background-color: #007bff; color: white; border: none; cursor: pointer; }
+        footer { background: #000; color: #fff; text-align: center; padding: 1rem; }
+        .signup-form { padding: 20px; }
+        input, button[type="submit"] { padding: 10px; margin-top: 5px; }
+    </style>
+</head>
+<body>
+    <div class="top-nav">
+        <a href="#home">Home</a>
+        <a href="#exhibitions">Exhibitions</a>
+        <a href="#artists">Artists</a>
+        <a href="#memberships">Memberships</a>
+    </div>
+    <div class="signup-form">
+        <h2>Sign Up for Our Newsletter</h2>
+        <input type="email" placeholder="Your Email" required>
+        <button type="submit">Subscribe</button>
+    </div>
+    <div class="gallery-grid">
+        <!-- Example artworks - Repeat structure for more artworks -->
+        <div class="artwork">
+            <img src="your-artwork-path.jpg" alt="Art Piece Name">
+            <div class="artwork-info">
+                <p>Artist Name - Year</p>
+            </div>
+            <div class="artwork-action">
+                <button onclick="alert('Added to cart!')">Add to Cart</button>
+            </div>
+        </div>
+    </div>
+    <footer>
+        <p>&copy; 2023 CanvasEcho Art Gallery</p>
+        <!-- Newsletter Signup and Social Media Sharing Tools -->
+    </footer>
+</body>
+</html>
